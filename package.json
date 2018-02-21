@@ -1,0 +1,32 @@
+{
+    "name": "webpack-html-template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "node build/dev-server.js"
+    },
+    "keywords": [],
+    "author": "Sangeeth_ks <sangeethks.in@gmail.com>",
+    "private": true,
+    "license": "ISC",
+    "devDependencies": {
+        "chalk": "^2.3.1",
+        "express": "^4.16.2",
+        "http-proxy-middleware": "^0.17.4",
+        "opn": "^5.2.0",
+        "semver": "^5.5.0",
+        "shelljs": "^0.8.1",
+        "webpack": "^3.11.0",
+        "webpack-merge": "^4.1.1"
+    },
+    "engines": {
+        "node": ">= 4.0.0",
+        "npm": ">= 3.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
+}
