@@ -10,6 +10,7 @@ if (!process.env.NODE_ENV) {
 const opn = require('opn')
 const path = require('path')
 const express = require('express')
+const webpack = require('webpack')
 const proxyMiddleware = require('http-proxy-middleware')
 const webpackConfig = process.env.NODE_ENV === 'testing' ? require('./webpack.prod.conf') : require('./webpack.dev.conf')
 
@@ -87,7 +88,7 @@ devMiddleware.waitUntilValid(function() {
 const server = app.listen(port)
 
 module.exports = {
-    ready: readyPromise
+    ready: readyPromise,
     close: function() {
         server.close()
     }    
