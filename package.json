@@ -4,7 +4,7 @@
   "description": "A webpack template to create static html websites easily",
   "main": "index.js",
   "scripts": {
-      "dev": ""
+      "dev": "node build/dev-server.js"
   },
   "repository": {
     "type": "git",
