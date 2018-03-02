@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/Sangeethks/webpack-html-static-template#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-es2015": "^6.24.1",
     "express": "^4.16.2",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^3.0.4",
