@@ -32,7 +32,13 @@ const express = require('express')
 // Uses plugin interface
 const webpack = require('webpack')
 
-const proxyMiddleware = require('http-proxy-middleware')
+// Decided not to use it right now
+// Because, I think this is for handling the default HTML histroy fallback API
+// NOTE: COMMENTED
+// const proxyMiddleware = require('http-proxy-middleware')
+
+// The webpack configurations
+// Based on the environment
 const webpackConfig = process.env.NODE_ENV === 'testing' ? require('./webpack.prod.conf') : require('./webpack.dev.conf')
 
 // PORT will be undefined by default,
