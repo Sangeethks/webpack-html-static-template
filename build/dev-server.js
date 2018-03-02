@@ -16,9 +16,24 @@ if (!process.env.NODE_ENV) {
 
 // This package will open websites, files and executable cross platform wise
 const opn = require('opn')
+
 // The node.js module
 const path = require('path')
+
+// This is a web framework of node
+// Creates HTTP servers easily
+// Mainly used for SPA's, websites, hybrid apps and public HTTP API's
+// Allows to setup middlewares to respond to HTTP request
 const express = require('express')
+
+// Webpack is module bundler, transform javascript and javascript packages
+// It can preprocess files while compiling (using loaders), eg: typescript or javascript, images,
+// To Base64
+// Uses plugin interface
+const webpack = require('webpack')
+
+const proxyMiddleware = require('http-proxy-middleware')
+const webpackConfig = process.env.NODE_ENV === 'testing' ? require('./webpack.prod.conf') : require('./webpack.dev.conf')
 
 // PORT will be undefined by default,
 // So set its value to the port value from config file
