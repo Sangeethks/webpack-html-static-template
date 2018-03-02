@@ -4,7 +4,7 @@
   "description": "A webpack template to create static html websites easily",
   "main": "index.js",
   "scripts": {
-      "dev": "node build/dev-server.js"
+    "dev": "node build/dev-server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Sangeethks/webpack-html-static-template/issues"
   },
-  "homepage": "https://github.com/Sangeethks/webpack-html-static-template#readme"
+  "homepage": "https://github.com/Sangeethks/webpack-html-static-template#readme",
+  "devDependencies": {
+    "express": "^4.16.2",
+    "opn": "^5.2.0"
+  }
 }
