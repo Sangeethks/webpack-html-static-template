@@ -30,3 +30,23 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 // Recognizes certain webpack errors and warnings and aggregates and clean them for -
 // better development experience
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+
+module.exports = merge(baseWebpackConfig, {
+    module: {
+
+    },
+    devtool: '#cheap-module-eval-source-map',
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': config.dev.env
+        }),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'index.html',
+            inject: true
+        }),
+        new FriendlyErrorsPlugin()
+    ]
+})

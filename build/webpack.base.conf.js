@@ -25,7 +25,11 @@ module.exports = {
     },
     module: {
         rules: [
-
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                include: [resolve('src'), resolve('test')]
+            }
         ]
     }
 }
