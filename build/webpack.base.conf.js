@@ -18,18 +18,5 @@ module.exports = {
     },
     resolve: {
         extentions: ['.js', '.json', '.css', '.scss'],
-        alias: {
-            '@': resolve('src'),
-            'scss': resolve('src/scss')
-        }
     },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                include: [resolve('src'), resolve('test')]
-            }
-        ]
-    }
 }
