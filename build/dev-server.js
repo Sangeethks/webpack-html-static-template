@@ -97,7 +97,7 @@ devMiddleware.waitUntilValid(function () {
 
     // When node environment is testing, don't open the browser
     if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
-        opm(uri)
+        opn(uri)
     }
     _resolve()
 })
