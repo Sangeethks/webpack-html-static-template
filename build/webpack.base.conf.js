@@ -22,7 +22,12 @@ module.exports = {
         publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath
     },
     resolve: {
-        extentions: ['.js', '.json', '.css', '.scss'],
+        extensions: ['.js'],
+        alias: {
+            components: path.resolve(__dirname, 'src/components/'),
+            containers: path.resolve(__dirname, 'src/containers/'),
+            utils: path.resolve(__dirname, 'src/utils/'),
+        },
     }
 }
 
