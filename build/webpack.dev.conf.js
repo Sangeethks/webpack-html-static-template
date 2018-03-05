@@ -31,6 +31,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 // better development experience
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
+console.log('[webpack.dev.conf.js | config.dev.env ]', config.dev.env);
+
 module.exports = merge(baseWebpackConfig, {
     devtool: '#cheap-module-eval-source-map',
     plugins: [

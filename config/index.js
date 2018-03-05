@@ -6,7 +6,7 @@ const path = require('path')
 module.exports = {
     dev: {
         // the environment configurations
-        env: 'development',
+        env: '"development"',
         // for setting the port of localhost
         port: 3000,
         // whether to open browser automatically on dev server start
@@ -18,7 +18,7 @@ module.exports = {
         cssSourceMap: false
     },
     build: {
-        env: 'production',
+        env: '"production"',
         index: path.resolve(__dirname, '../dist/index.html'),
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'static',
