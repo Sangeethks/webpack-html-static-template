@@ -34,16 +34,16 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 module.exports = merge(baseWebpackConfig, {
     devtool: '#cheap-module-eval-source-map',
     plugins: [
-        // new webpack.DefinePlugin({
-        //     'process.env': config.dev.env
-        // }),
-        // new webpack.HotModuleReplacementPlugin(),
-        // new webpack.NoEmitOnErrorsPlugin(),
-        // new HtmlWebpackPlugin({
-        //     filename: 'index.html',
-        //     template: 'index.html',
-        //     inject: true
-        // }),
-        // new FriendlyErrorsPlugin()
+        new webpack.DefinePlugin({
+            'process.env': config.dev.env
+        }),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'index.html',
+            inject: true
+        }),
+        new FriendlyErrorsPlugin()
     ]
 })
