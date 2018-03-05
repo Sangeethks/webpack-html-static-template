@@ -30,6 +30,8 @@ const express = require('express')
 // Uses plugin interface
 const webpack = require('webpack')
 
+const proxyMiddleware = require('http-proxy-middleware')
+
 // Decided not to use it right now
 // Because, I think this is for handling the default HTML histroy fallback API
 // NOTE: COMMENTED
@@ -74,6 +76,15 @@ compiler.plugin('compilation', function(compilation) {
 // enable hot-reload and state-preserving
 // compilation error display
 app.use(hotMiddleware);
+
+// Proxy api requests
+Object.keys(proxyTable).forEach(function (context) {
+    var options = proxyTable[context]
+    if (typeof options === 'string') {
+        options = { target: options }
+    }
+    app.use(proxyMiddleware(options.filter || context, options))
+})
 
 app.use(require('connect-history-api-fallback')())
 
