@@ -1,16 +1,7 @@
-// 'use strict'
+'use strict'
 
 const path = require('path')
 const config = require('../config')
-
-// function resolve(dir) {
-//     return path.join(__dirname, '..', dir)
-// }
-
-console.log('assetsRoot ', config.build.assetsRoot);
-console.log('build assetsPublicPath ', config.build.assetsPublicPath);
-console.log('dev assetsPublicPath ', config.dev.assetsPublicPath);
-console.log('NODE_ENV ', process.env.NODE_ENV);
 
 module.exports = {
     entry: {
@@ -30,13 +21,3 @@ module.exports = {
         },
     }
 }
-
-
-// const path = require('path')
-// module.exports = {
-//     entry: './src/main.js',
-//     output: {
-//         path: path.resolve(__dirname, 'dist'),
-//         filename: '[name].js'
-//     }
-// }

@@ -39,8 +39,6 @@ const webpack = require('webpack')
 // Based on the environment
 const webpackConfig = process.env.NODE_ENV === 'testing' ? require('./webpack.prod.conf') : require('./webpack.dev.conf')
 
-console.log('webpackConfig', webpackConfig);
-
 // PORT will be undefined by default,
 // So set its value to the port value from config file
 const port = process.env.PORT || config.dev.port
